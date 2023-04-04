@@ -16,7 +16,6 @@ from utils.general import non_max_suppression, make_divisible, scale_coords, xyx
 from utils.plots import color_list, plot_one_box
 from utils.torch_utils import time_synchronized
 from utils.activations import Mish
-from timm.models.layers import DropPath, to_2tuple, trunc_normal_
 import torch.nn.functional as F
 class SiLU(torch.nn.Module):  # export-friendly version of nn.SiLU()
     @staticmethod
