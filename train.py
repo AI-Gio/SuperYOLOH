@@ -208,7 +208,7 @@ def train(hyp, opt, device, tb_writer=None):
     if opt.data.endswith('vedai.yaml') or opt.data.endswith('SRvedai.yaml'):
         from utils.datasets import create_dataloader_sr as create_dataloader
     else:
-        from utils.datasets_single import create_dataloader
+        from utils.datasets import create_dataloader
     dataloader, dataset = create_dataloader(train_path, imgsz, batch_size, gs, opt,
                                         hyp=hyp, augment=True, cache=opt.cache_images, rect=opt.rect, rank=rank,
                                         #world_size=opt.world_size,
